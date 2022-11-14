@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 16:42:39 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/14 13:06:15 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/14 17:00:05 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	size;
 	char	*str;
 
+	if (!s)
+		return (NULL);
 	size = ft_strlen(s);
 	if (start > size)
 		size = 0;

@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 09:05:15 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/14 16:01:44 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/14 17:13:01 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ char	**ft_split(char const *s, char c)
 	int		words_count;
 	char	**tab;
 
+	if (!s)
+		return (NULL);
 	words_count = ft_count_words(s, c);
 	s = ft_remove_sep(s, c);
 	i = -1;

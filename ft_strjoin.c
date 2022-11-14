@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 17:18:07 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/11 10:28:05 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/14 17:01:52 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		s1len;
 	int		s2len;
 	char	*str;
+
+	if (!s1)
+		return ((char *)s2);
+	if (!s2)
+		return ((char *)s1);
 
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
