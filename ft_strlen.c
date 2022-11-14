@@ -6,11 +6,13 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:48:35 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/10 10:37:58 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/14 12:48:46 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
+#include <stdlib.h>
+
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 

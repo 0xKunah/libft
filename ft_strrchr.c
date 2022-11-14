@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:24:47 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/11 15:08:46 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/14 12:25:01 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strrchr(const char *s, int c)
 
 	i = ft_strlen(s);
 	str = (char *)s;
-	while (i && str[i] != c)
+	while (i && str[i] != c % 256)
 		i--;
-	if (i == 0 && str[0] != c)
+	if (i == 0 && str[0] != c % 256)
 		return (NULL);
 	return (str + i);
 }

@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 09:05:15 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/11 10:27:51 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/14 16:01:44 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,43 +39,35 @@ static int	ft_wordlen(const char *s, char c)
 	return (i);
 }
 
-char	**null_ended_tab(char **t, int idx)
+static char	*ft_remove_sep(const char *str, char sep)
 {
-	t[idx] = NULL;
-	return (t);
-}
-
-static void	init(const char *s, char c, int *words, int *i)
-{
-	*words = ft_count_words(s, c);
-	*i = -1;
+	while (*str == sep)
+		str++;
+	return ((char *)str);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		len;
-	int		words;
-	char	*str;
+	int		words_count;
 	char	**tab;
 
-	init(s, c, &words, &i);
-	s = ft_strtrim((char *)s, &c);
-	str = (char *)s;
-	tab = malloc((words + 1) * sizeof(char *));
+	words_count = ft_count_words(s, c);
+	s = ft_remove_sep(s, c);
+	i = -1;
+	tab = malloc((words_count + 1) * sizeof(char *));
 	if (!tab)
 		return (NULL);
-	if (!s[0])
-		return (null_ended_tab(tab, 0));
-	while (++i < words)
+	while (++i < words_count)
 	{
-		len = ft_wordlen(str, c);
+		len = ft_wordlen(s, c);
 		tab[i] = malloc((len + 1) * sizeof(char));
 		if (!tab[i])
 			return (NULL);
-		ft_strlcpy(tab[i], str, len + 1);
-		str = ft_strtrim(str + len + 1, &c);
+		ft_strlcpy(tab[i], s, len + 1);
+		s = ft_remove_sep(s + len, c);
 	}
-	free((void *)s);
-	return (null_ended_tab(tab, words));
+	tab[i] = NULL;
+	return (tab);
 }
