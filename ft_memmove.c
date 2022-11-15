@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:49:37 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/11 10:45:27 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/15 18:33:00 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		while ((int)--len >= 0)
+		while (len--)
 			((char *)dst)[len] = ((char *)src)[len];
 	}
 	return (dst);

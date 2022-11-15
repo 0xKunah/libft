@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 09:05:15 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/14 17:13:01 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/15 18:35:34 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,16 @@ static char	*ft_remove_sep(const char *str, char sep)
 	return ((char *)str);
 }
 
+char	**free_tab(char **tab)
+{
+	int	i;
+
+	i = -1;
+	while (tab[++i])
+		free(tab[i]);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
@@ -66,7 +76,7 @@ char	**ft_split(char const *s, char c)
 		len = ft_wordlen(s, c);
 		tab[i] = malloc((len + 1) * sizeof(char));
 		if (!tab[i])
-			return (NULL);
+			return (free_tab(tab));
 		ft_strlcpy(tab[i], s, len + 1);
 		s = ft_remove_sep(s + len, c);
 	}

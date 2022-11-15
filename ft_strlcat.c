@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:20:51 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/11 15:43:47 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/15 18:32:18 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static char	*ft_strncat(char *dst, const char *src, size_t dstsize)
 	return (dst);
 }
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dstlen;
 	size_t	srclen;
