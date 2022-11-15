@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 08:35:21 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/14 17:12:15 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/15 15:58:13 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ static int	ft_get_start_trim(const char *s1, const char *set)
 		;
 	return (start_trim);
 }
-
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 20:43:54 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/14 17:16:34 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/15 15:44:10 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
 
-	if (*lst || del)
+	if (lst && del)
 	{
 		while (*lst)
 		{
@@ -25,6 +25,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 			free(*lst);
 			*lst = tmp;
 		}
+		*lst = NULL;
 	}
-	*lst = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 13:37:07 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/10 15:54:12 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/15 15:53:40 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
 
-	i = -1;
-	while (s[++i])
-		f(i, s + i);
+	if (s && f)
+	{
+		i = -1;
+		while (s[++i])
+			f(i, s + i);
+	}
 }
