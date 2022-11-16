@@ -6,7 +6,7 @@
 #    By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/16 13:34:19 by dbiguene          #+#    #+#              #
-#    Updated: 2022/11/16 13:50:56 by dbiguene         ###   ########lyon.fr    #
+#    Updated: 2022/11/16 13:59:42 by dbiguene         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,9 +78,6 @@ bonus			:	${OBJS_BONUS} Makefile ${HEAD}
 
 ${NAME}			:	${OBJS} Makefile ${HEAD}
 					${AR} ${NAME} ${OBJS}
-
-${COMP_NAME}	:	${OBJS} ${OBJS_BONUS} Makefile ${HEAD}
-					${CC} ${CFLAGS} -I ${HEAD} ${OBJS} -o ${COMP_NAME}
 
 # ---- Compiled Rules ---- #
 
