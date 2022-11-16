@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 11:08:11 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/11 10:27:36 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/16 17:03:18 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static char	*min_int_exception(void)
 	char	*str;
 
 	str = malloc(12);
-	if (!str)
+	if (str)
 		return (NULL);
 	ft_strlcpy(str, "-2147483648", 12);
 	return (str);

@@ -6,11 +6,12 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:46:42 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/11 16:12:55 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/16 16:50:36 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 static int	ft_isspace(char c)
 {
@@ -42,5 +43,9 @@ int	ft_atoi(const char *str)
 		i = (i * 10) + (*s - 48);
 		s++;
 	}
+	if (i > LLONG_MAX && x)
+		return (0);
+	if (i > LLONG_MAX && !x)
+		return (-1);
 	return (i * x);
 }
