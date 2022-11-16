@@ -6,7 +6,7 @@
 #    By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/16 13:34:19 by dbiguene          #+#    #+#              #
-#    Updated: 2022/11/16 13:34:28 by dbiguene         ###   ########lyon.fr    #
+#    Updated: 2022/11/16 13:48:49 by dbiguene         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,8 +27,6 @@ DIR_OBJS	=	.objs/
 # ---- Files ---- #
 
 HEAD		=	libft.h 
-
-SRCS_OUTPUT	=	main.c
 
 SRCS		=	ft_isalpha.c	ft_isdigit.c	\
 				ft_isalnum.c	ft_isascii.c	\
@@ -58,8 +56,6 @@ OBJS		=	${SRCS:%.c=${DIR_OBJS}%.o}
 
 OBJS_BONUS	=	${SRCS_BONUS:%.c=${DIR_OBJS}%.o}
 
-OBJS_OUTPUT	=	${SRCS_OUTPUT:%.c=${DIR_OBJS}%.o}
-
 # ---- Compilation ---- #
 
 CC		=	cc
@@ -83,14 +79,12 @@ bonus			:	${OBJS_BONUS} Makefile ${HEAD}
 ${NAME}			:	${OBJS} Makefile ${HEAD}
 					${AR} ${NAME} ${OBJS}
 
-${COMP_NAME}	:	${OBJS} ${OBJS_BONUS} ${OBJS_OUTPUT} Makefile ${HEAD}
-					${CC} ${CFLAGS} -I . ${OBJS} ${OBJS_OUTPUT} -o ${COMP_NAME}
+${COMP_NAME}	:	${OBJS} ${OBJS_BONUS} Makefile ${HEAD}
+					${CC} ${CFLAGS} -I . ${OBJS} -o ${COMP_NAME}
 
 # ---- Compiled Rules ---- #
 
 ${OBJS}			:	| ${DIR_OBJS}
-
-${OBJS_OUTPUT}	:	| ${DIR_OBJS}
 
 ${OBJS_BONUS}	:	| ${DIR_OBJS}
 
@@ -109,4 +103,3 @@ fclean			:	clean
 					${RM} ${NAME}
 
 re				:	fclean all
-
