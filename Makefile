@@ -6,7 +6,7 @@
 #    By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/16 13:34:19 by dbiguene          #+#    #+#              #
-#    Updated: 2022/11/16 13:48:49 by dbiguene         ###   ########lyon.fr    #
+#    Updated: 2022/11/16 13:50:56 by dbiguene         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ DIR_OBJS	=	.objs/
 
 # ---- Files ---- #
 
-HEAD		=	libft.h 
+HEAD		=	libft.h
 
 SRCS		=	ft_isalpha.c	ft_isdigit.c	\
 				ft_isalnum.c	ft_isascii.c	\
@@ -80,7 +80,7 @@ ${NAME}			:	${OBJS} Makefile ${HEAD}
 					${AR} ${NAME} ${OBJS}
 
 ${COMP_NAME}	:	${OBJS} ${OBJS_BONUS} Makefile ${HEAD}
-					${CC} ${CFLAGS} -I . ${OBJS} -o ${COMP_NAME}
+					${CC} ${CFLAGS} -I ${HEAD} ${OBJS} -o ${COMP_NAME}
 
 # ---- Compiled Rules ---- #
 
@@ -89,7 +89,7 @@ ${OBJS}			:	| ${DIR_OBJS}
 ${OBJS_BONUS}	:	| ${DIR_OBJS}
 
 ${DIR_OBJS}%.o	:	%.c ${HEAD} Makefile
-					${CC} ${CFLAGS} -I . -c $< -o $@
+					${CC} ${CFLAGS} -I ${HEAD} -c $< -o $@
 
 ${DIR_OBJS}		:
 					${MKDIR} ${DIR_OBJS}
