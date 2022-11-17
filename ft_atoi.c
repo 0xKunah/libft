@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:46:42 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/17 13:56:32 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/17 15:12:56 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ int	ft_atoi(const char *str)
 		i = (i * 10) + (*s - 48);
 		s++;
 	}
-	return (i * sign);
+	return ((int)i * sign);
 }
