@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:48:35 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/14 12:48:46 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/17 19:03:57 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
