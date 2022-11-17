@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 09:05:15 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/15 18:35:34 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/17 15:08:47 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static char	*ft_remove_sep(const char *str, char sep)
 	return ((char *)str);
 }
 
-char	**free_tab(char **tab)
+static char	**free_tab(char **tab)
 {
 	int	i;
 

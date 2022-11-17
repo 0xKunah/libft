@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:52:17 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/11 10:27:28 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/17 15:07:59 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*t;
 
-	if (count != (count * size) / size)
+	if (!size || count != (count * size) / size)
 		return (NULL);
 	t = malloc(count * size);
 	if (!t)
