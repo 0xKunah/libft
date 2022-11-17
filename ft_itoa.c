@@ -6,22 +6,11 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 11:08:11 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/16 17:03:18 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/17 14:01:54 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static char	*min_int_exception(void)
-{
-	char	*str;
-
-	str = malloc(12);
-	if (str)
-		return (NULL);
-	ft_strlcpy(str, "-2147483648", 12);
-	return (str);
-}
 
 void	init(int *len, int *sign, int *factor, int *n)
 {
@@ -49,7 +38,7 @@ char	*ft_itoa(int n)
 	char	*str;
 
 	if (n == -2147483648)
-		return (min_int_exception());
+		return (ft_strdup("-2147483648"));
 	init(&len, &sign, &factor, &n);
 	str = ft_calloc(len + 1, sizeof(char));
 	if (!str)
