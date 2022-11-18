@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 09:05:15 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/17 15:08:47 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/18 19:17:52 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ static char	**free_tab(char **tab)
 	i = -1;
 	while (tab[++i])
 		free(tab[i]);
+	free(tab);
 	return (NULL);
 }
 

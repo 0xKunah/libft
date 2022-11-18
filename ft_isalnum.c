@@ -6,14 +6,12 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:43:29 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/07 17:13:09 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/18 19:18:32 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(int c)
 {
-	if ((c >= 'A' && c <= 'Z' ) || (c >= 'a' && c <= 'z')
-		|| (c >= 48 && c <= 57))
-		return (1);
-	return (0);
+	return ((c >= 'A' && c <= 'Z' ) || (c >= 'a' && c <= 'z')
+		|| (c >= 48 && c <= 57));
 }

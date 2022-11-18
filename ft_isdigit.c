@@ -6,13 +6,11 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:37:05 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/07 14:45:38 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/18 19:18:53 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
+	return (c >= 48 && c <= 57);
 }

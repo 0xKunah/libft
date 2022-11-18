@@ -6,11 +6,11 @@
 #    By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/16 13:34:19 by dbiguene          #+#    #+#              #
-#    Updated: 2022/11/17 16:36:17 by dbiguene         ###   ########lyon.fr    #
+#    Updated: 2022/11/18 19:17:36 by dbiguene         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY:	all clean fclean re
+.PHONY:	all clean fclean re bonus
 
 # ******** VARIABLES ******** #
 

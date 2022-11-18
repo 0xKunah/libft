@@ -6,7 +6,7 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 23:03:27 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/15 15:50:55 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/18 19:22:30 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		return (NULL);
 	node = lst->next;
 	list = ft_lstnew(f(lst->content));
+	if (!list)
+		return (NULL);
 	head = list;
 	while (node)
 	{

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 20:52:31 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/13 20:52:31 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/18 19:22:01 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,14 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*head;
 
-	head = lst;
-	while (head)
+	if (f)
 	{
-		f(head->content);
-		head = head->next;
+		head = lst;
+		while (head)
+		{
+			f(head->content);
+			head = head->next;
+		}
 	}
+	
 }
