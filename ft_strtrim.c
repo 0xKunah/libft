@@ -24,7 +24,7 @@ static int	ft_get_start_trim(const char *s1, const char *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
+	size_t	i;
 	int		end_trim;
 	char	*trimmed;
 
