@@ -6,11 +6,12 @@
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:46:42 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/17 15:12:56 by dbiguene         ###   ########lyon.fr   */
+/*   Updated: 2022/11/18 12:57:18 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 static int	ft_isspace(char c)
 {
@@ -18,6 +19,14 @@ static int	ft_isspace(char c)
 		|| c == '\f' || c == '\r' || c == ' ')
 		return (1);
 	return (0);
+}
+
+static int	ft_overflow(int sign)
+{
+	if (sign < 0)
+		return ((int)LONG_MIN);
+	else
+		return ((int)LONG_MAX);
 }
 
 int	ft_atoi(const char *str)
@@ -39,6 +48,8 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit(*s))
 	{
+		if (i != (i * 10 + *s - 48) / 10)
+			return (ft_overflow(sign));
 		i = (i * 10) + (*s - 48);
 		s++;
 	}
