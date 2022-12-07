@@ -3,7 +3,7 @@
 		<img width="25%" src="https://avatars.githubusercontent.com/u/91893485?v=4"/>
 		<h1>libft</h1>
 	</header>
-	<h5>⚠️This is a 42 project, if you are a 42 student, you shouldn't take this code </h5>
+	<h4>⚠️This is a 42 project, if you are a 42 student, you shouldn't take this code </h4>
 	<p>Mark on this project: 125</p>
 	<h2>Table of content: </h2>
 	<ul>
