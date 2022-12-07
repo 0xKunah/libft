@@ -1,7 +1,7 @@
 <body>
 	<header style="display: flex; align-items: center; justify-content: space-around">
 		<img width="25%" src="https://avatars.githubusercontent.com/u/91893485?v=4"/>
-		<h1>Project name</h1>
+		<h1>libft</h1>
 	</header>
 	<h5>⚠️This is a 42 project, if you are a 42 student, you shouldn't take this code </h5>
 	<p>Mark on this project: 125</p>
