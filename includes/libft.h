@@ -18,5 +18,6 @@
 # include "ft_linked_list.h"
 # include "ft_mem.h"
 # include "ft_string.h"
+# include "ft_get_next_line.h"
 
 #endif
