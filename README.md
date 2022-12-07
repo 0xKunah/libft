@@ -1,7 +1,7 @@
 <body>
 	<header style="display: flex; align-items: center; justify-content: space-around">
 		<img width="25%" src="https://avatars.githubusercontent.com/u/91893485?v=4"/>
-		<h1>libft</h1>
+		<h1>Project name</h1>
 	</header>
 	<h5>⚠️This is a 42 project, if you are a 42 student, you shouldn't take this code </h5>
 	<p>Mark on this project: 125</p>
@@ -13,63 +13,63 @@
 		<li><a href="#bonus">Bonus functions</a></li>
 	</ul>
 	<h2 id="libc">Libc functions</h2>
-	<ul style="display: flex; flex-wrap: wrap">
-		<h4 style="width: 100%">Char: </h4>
-		<li style="width: 50%">isalpha</li>
-		<li style="width: 50%">isdigit</li>
-		<li style="width: 50%">isalnum</li>
-		<li style="width: 50%">isascii</li>
-		<li style="width: 50%">isprint</li>
-		<li style="width: 50%">tolower</li>
-		<li style="width: 50%">toupper</li>
-		<h4 style="width: 100%">String: </h4>
-		<li style="width: 50%">strchr</li>
-		<li style="width: 50%">strrchr</li>
-		<li style="width: 50%">strlen</li>
-		<li style="width: 50%">strncmp</li>
-		<li style="width: 50%">strlcpy</li>
-		<li style="width: 50%">strlcat</li>
-		<li style="width: 50%">strnstr</li>
-		<li style="width: 50%">strdup</li>
-		<h4 style="width: 100%">Memory: </h4>
-		<li style="width: 50%">memset</li>
-		<li style="width: 50%">memchr</li>
-		<li style="width: 50%">bzero</li>
-		<li style="width: 50%">memcpy</li>
-		<li style="width: 50%">memcmp</li>
-		<li style="width: 50%">memmove</li>
-		<li style="width: 50%">calloc</li>
-		<h4 style="width: 100%">Number: </h4>
-		<li style="width: 50%">atoi</li>
+	<ul>
+		<h4>Char: </h4>
+		<li>isalpha</li>
+		<li>isdigit</li>
+		<li>isalnum</li>
+		<li>isascii</li>
+		<li>isprint</li>
+		<li>tolower</li>
+		<li>toupper</li>
+		<h4>String: </h4>
+		<li>strchr</li>
+		<li>strrchr</li>
+		<li>strlen</li>
+		<li>strncmp</li>
+		<li>strlcpy</li>
+		<li>strlcat</li>
+		<li>strnstr</li>
+		<li>strdup</li>
+		<h4>Memory: </h4>
+		<li>memset</li>
+		<li>memchr</li>
+		<li>bzero</li>
+		<li>memcpy</li>
+		<li>memcmp</li>
+		<li>memmove</li>
+		<li>calloc</li>
+		<h4>Number: </h4>
+		<li>atoi</li>
 	</ul>
 	<h2 id="additional">Additional functions</h2>
-	<ul style="display: flex; flex-wrap: wrap">
-		<h4 style="width: 100%">String: </h4>
-		<li style="width: 50%">ft_substr</li>
-		<li style="width: 50%">ft_strjoin</li>
-		<li style="width: 50%">ft_strtrim</li>
-		<li style="width: 50%">ft_split</li>
-		<li style="width: 50%">ft_strmapi</li>
-		<li style="width: 50%">ft_striteri</li>
-		<h4 style="width: 100%">io: </h4>
-		<li style="width: 50%">ft_putchar_fd</li>
-		<li style="width: 50%">ft_putstr_fd</li>
-		<li style="width: 50%">ft_putendl_fd</li>
-		<li style="width: 50%">ft_putnbr_fd</li>
-		<h4 style="width: 100%">Number: </h4>
-		<li style="width: 50%">ft_itoa</li>
+	<ul>
+		<h4>String: </h4>
+		<li>ft_substr</li>
+		<li>ft_strjoin</li>
+		<li>ft_strtrim</li>
+		<li>ft_split</li>
+		<li>ft_strmapi</li>
+		<li>ft_striteri</li>
+		<h4>io: </h4>
+		<li>ft_putchar_fd</li>
+		<li>ft_putstr_fd</li>
+		<li>ft_putendl_fd</li>
+		<li>ft_putnbr_fd</li>
+		<h4>Number: </h4>
+		<li>ft_itoa</li>
 	</ul>
 	<h2 id="bonus">Bonus functions</h2>
-	<ul style="display: flex; flex-wrap: wrap">
-		<h4 style="width: 100%">Linked lists: </h4>
-		<li style="width: 50%">ft_lstnew</li>
-		<li style="width: 50%">ft_lstadd_front</li>
-		<li style="width: 50%">ft_lstsize</li>
-		<li style="width: 50%">ft_lstlast</li>
-		<li style="width: 50%">ft_lstadd_back</li>
-		<li style="width: 50%">ft_lstdelone</li>
-		<li style="width: 50%">ft_lstclear</li>
-		<li style="width: 50%">ft_lstiter</li>
-		<li style="width: 50%">ft_lstmap</li>
+	<ul>
+		<h4>Linked lists: </h4>
+		<li>ft_lstnew</li>
+		<li>ft_lstadd_front</li>
+		<li>ft_lstsize</li>
+		<li>ft_lstlast</li>
+		<li>ft_lstadd_back</li>
+		<li>ft_lstdelone</li>
+		<li>ft_lstclear</li>
+		<li>ft_lstiter</li>
+		<li>ft_lstmap</li>
 	</ul>
 </body>
