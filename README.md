@@ -11,6 +11,7 @@
 		<li><a href="#libc">Libc functions</a></li>
 		<li><a href="#additional">Additional functions</a></li>
 		<li><a href="#bonus">Bonus functions</a></li>
+		<li><a href="#other">Other functions (not on the subject)</a></li>
 	</ul>
 	<h2 id="libc">Libc functions</h2>
 	<ul>
@@ -71,5 +72,12 @@
 		<li>ft_lstclear</li>
 		<li>ft_lstiter</li>
 		<li>ft_lstmap</li>
+	</ul>
+	
+	<h2 id="other">Other functions (not on the subject)</h2>
+	<ul>
+		<li>get_next_line</li>
+		<h4>io: </h4>
+		<li>ft_printf</li>
 	</ul>
 </body>
