@@ -73,7 +73,6 @@
 		<li>ft_lstiter</li>
 		<li>ft_lstmap</li>
 	</ul>
-	
 	<h2 id="other">Other functions (not on the subject)</h2>
 	<ul>
 		<li>get_next_line</li>
