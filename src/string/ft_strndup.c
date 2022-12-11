@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "../../includes/string.h"
 
 char    *ft_strndup(const char *s1, size_t n)
 {
@@ -18,6 +19,8 @@ char    *ft_strndup(const char *s1, size_t n)
     size_t  i;
 
     i = 0;
+    if (ft_strlen(s1) < n)
+        n = ft_strlen(s1);
     s2 = (char *)malloc(sizeof(char) * (n + 1));
     if (s2 == NULL)
         return (NULL);
