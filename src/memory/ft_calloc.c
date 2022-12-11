@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/13 19:35:00 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/13 19:35:00 by dbiguene         ###   ########lyon.fr   */
+/*   Created: 2022/11/09 15:52:17 by dbiguene          #+#    #+#             */
+/*   Updated: 2022/11/17 16:12:34 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/linked_list.h"
+#include "../../includes/memory.h"
 
-t_list	*ft_lstnew(void *content)
+void	*ft_calloc(size_t count, size_t size)
 {
-	t_list	*node;
+	void	*t;
 
-	node = malloc(sizeof(t_list));
-	if (!node)
+	if (size && count != (count * size) / size)
 		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+	t = malloc(count * size);
+	if (!t)
+		return (NULL);
+	ft_bzero(t, count * size);
+	return ((void *)t);
 }

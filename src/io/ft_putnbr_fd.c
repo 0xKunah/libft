@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_io.h"
+#include "../../includes/io.h"
 
 void	ft_putnbr_fd(int nb, int fd)
 {

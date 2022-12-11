@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   number.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/13 19:35:00 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/13 19:35:00 by dbiguene         ###   ########lyon.fr   */
+/*   Created: 2022/11/19 10:56:18 by dbiguene          #+#    #+#             */
+/*   Updated: 2022/12/11 00:36:21 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/linked_list.h"
+#ifndef NUMBER_H
+# define NUMBER_H
 
-t_list	*ft_lstnew(void *content)
-{
-	t_list	*node;
+int			ft_atoi(const char *str);
+int         ft_atoll(const char *str);
+char		*ft_itoa(int n);
+char        *ft_itob(int n, char *base);
+char        *ft_itox(int n);
 
-	node = malloc(sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
-}
+#endif

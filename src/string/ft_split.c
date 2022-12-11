@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_string.h"
+#include "../../includes/string.h"
 
 static int	ft_count_words(const char *s, char sep)
 {

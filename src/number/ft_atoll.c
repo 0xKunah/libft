@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,29 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_char.h"
-
-int	ft_atoi(const char *str)
+int ft_atoll(const char *str)
 {
-	long		i;
-	int			sign;
-	char		*s;
+    int i;
+    int sign;
+    long long result;
 
-	i = 0;
-	sign = 1;
-	s = (char *)str;
-	while (ft_isspace(*s) && *s != '-' && *s != '+')
-		s++;
-	if (*s == '-' || *s == '+')
-	{
-		if (*s == '-')
-			sign *= -1;
-		s++;
-	}
-	while (ft_isdigit(*s))
-	{
-		i = (i * 10) + (*s - 48);
-		s++;
-	}
-	return ((int)i * sign);
+    i = 0;
+    sign = 1;
+    result = 0;
+    while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+        i++;
+    if (str[i] == '-')
+    {
+        sign = -1;
+        i++;
+    }
+    else if (str[i] == '+')
+        i++;
+    while (str[i] >= '0' && str[i] <= '9')
+    {
+        result = result * 10 + str[i] - '0';
+        i++;
+    }
+    return (result * sign);
 }

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_string.h"
+#include "../../includes/string.h"
 
 static int	ft_get_start_trim(const char *s1, const char *set)
 {

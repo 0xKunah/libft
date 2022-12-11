@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_clamp.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/13 19:35:00 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/13 19:35:00 by dbiguene         ###   ########lyon.fr   */
+/*   Created: 2022/12/11 01:55:24 by dbiguene          #+#    #+#             */
+/*   Updated: 2022/12/11 01:56:53 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/linked_list.h"
-
-t_list	*ft_lstnew(void *content)
+int    ft_clamp(int min, int max, int n)
 {
-	t_list	*node;
-
-	node = malloc(sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+    if (n < min)
+        return (min);
+    if (n > max)
+        return (max);
+    return (n);
 }

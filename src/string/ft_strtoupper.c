@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strtoupper.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/13 19:35:00 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/13 19:35:00 by dbiguene         ###   ########lyon.fr   */
+/*   Created: 2022/12/11 00:35:18 by dbiguene          #+#    #+#             */
+/*   Updated: 2022/12/11 00:36:21 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/linked_list.h"
-
-t_list	*ft_lstnew(void *content)
+char *ft_strtoupper(char *str)
 {
-	t_list	*node;
+    int i;
 
-	node = malloc(sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+    i = 0;
+    while (str[i])
+    {
+        if (str[i] >= 'a' && str[i] <= 'z')
+            str[i] -= 32;
+        i++;
+    }
+    return (str);
 }

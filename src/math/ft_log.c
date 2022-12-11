@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_log.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 15:52:17 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/17 16:12:34 by dbiguene         ###   ########lyon.fr   */
+/*   Created: 2022/12/11 00:35:18 by dbiguene          #+#    #+#             */
+/*   Updated: 2022/12/11 00:36:21 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_mem.h"
-
-void	*ft_calloc(size_t count, size_t size)
+int ft_log(int n, int base)
 {
-	void	*t;
+    int i;
 
-	if (size && count != (count * size) / size)
-		return (NULL);
-	t = malloc(count * size);
-	if (!t)
-		return (NULL);
-	ft_bzero(t, count * size);
-	return ((void *)t);
+    i = 0;
+    while (n > 0)
+    {
+        n /= base;
+        i++;
+    }
+    return (i);
 }

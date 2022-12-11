@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_string.h                                        :+:      :+:    :+:   */
+/*   string.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfries <vfries@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/19 11:08:57 by vfries            #+#    #+#             */
-/*   Updated: 2022/12/03 04:55:40 by vfries           ###   ########lyon.fr   */
+/*   Created: 2022/11/19 10:56:18 by dbiguene          #+#    #+#             */
+/*   Updated: 2022/12/11 00:36:21 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STRING_H
-# define FT_STRING_H
+#ifndef STRING_H
+# define STRING_H
 
 # include <stdlib.h>
 
@@ -29,5 +29,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strtolower(char *str);
+char    *ft_strtoupper(char *str);
 
 #endif

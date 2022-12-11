@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/13 19:35:00 by dbiguene          #+#    #+#             */
-/*   Updated: 2022/11/13 19:35:00 by dbiguene         ###   ########lyon.fr   */
+/*   Created: 2022/11/09 14:46:42 by dbiguene          #+#    #+#             */
+/*   Updated: 2022/11/17 15:12:56 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/linked_list.h"
+#include "../../includes/char.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_atoi(const char *str)
 {
-	t_list	*node;
+	long		i;
+	int			sign;
+	char		*s;
 
-	node = malloc(sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+	i = 0;
+	sign = 1;
+	s = (char *)str;
+	while (ft_isspace(*s) && *s != '-' && *s != '+')
+		s++;
+	if (*s == '-' || *s == '+')
+	{
+		if (*s == '-')
+			sign *= -1;
+		s++;
+	}
+	while (ft_isdigit(*s))
+	{
+		i = (i * 10) + (*s - 48);
+		s++;
+	}
+	return ((int)i * sign);
 }

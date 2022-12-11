@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 
-#include "../../../includes/ft_string.h"
+#include "../../../includes/string.h"
 #include "ft_printers.h"
 
 static int	increment_i(int *i, char *str)

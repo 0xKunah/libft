@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_string.h"
-#include "../../includes/ft_mem.h"
+#include "../../includes/string.h"
+#include "../../includes/memory.h"
 
 static void	init(int *len, int *sign, int *factor, int *n)
 {

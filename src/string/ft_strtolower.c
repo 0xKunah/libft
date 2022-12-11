@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_char.h                                          :+:      :+:    :+:   */
+/*   ft_strtolower.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfries <vfries@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/19 10:56:18 by vfries            #+#    #+#             */
-/*   Updated: 2022/12/02 18:05:21 by vfries           ###   ########lyon.fr   */
+/*   Created: 2022/12/11 00:35:18 by dbiguene          #+#    #+#             */
+/*   Updated: 2022/12/11 00:36:21 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_CHAR_H
-# define FT_CHAR_H
+char *ft_strtolower(char *str)
+{
+    int i;
 
-int	ft_isalnum(int c);
-int	ft_isalpha(int c);
-int	ft_isascii(int c);
-int	ft_isdigit(int c);
-int	ft_isprint(int c);
-int	ft_isspace(int c);
-int	ft_tolower(int c);
-int	ft_toupper(int c);
-
-#endif
+    i = 0;
+    while (str[i])
+    {
+        if (str[i] >= 'A' && str[i] <= 'Z')
+            str[i] += 32;
+        i++;
+    }
+    return (str);
+}

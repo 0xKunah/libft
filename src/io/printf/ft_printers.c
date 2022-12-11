@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_printers.h"
-#include "../../../includes/ft_string.h"
-#include "../../../includes/ft_numbers.h"
+#include "../../../includes/string.h"
+#include "../../../includes/number.h"
 
 int	ft_printer(char type, va_list args)
 {

@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_numbers.h                                       :+:      :+:    :+:   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfries <vfries@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 02:43:12 by vfries            #+#    #+#             */
-/*   Updated: 2022/12/02 12:33:37 by vfries           ###   ########lyon.fr   */
+/*   Created: 2022/12/11 00:35:18 by dbiguene          #+#    #+#             */
+/*   Updated: 2022/12/11 00:36:21 by dbiguene         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_NUMBERS_H
-# define FT_NUMBERS_H
+#include <stdlib.h>
 
-# include <stddef.h>
-# include <sys/types.h>
-
-int			ft_atoi(const char *str);
-char		*ft_itoa(int n);
-
-#endif
+void    ft_free(void *ptr)
+{
+    if (ptr)
+        free(ptr);
+    ptr = NULL;
+}
