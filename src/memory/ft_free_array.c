@@ -12,18 +12,15 @@
 
 #include <stdlib.h>
 
-void ft_free_array(void **tab)
+void	ft_free_array(void **tab)
 {
-    int i;
+	int	i;
 
-    if (tab)
-    {
-        i = 0;
-        while (tab[i])
-        {
-            free(tab[i]);
-            i++;
-        }
-        free(tab);
-    }
+	if (tab)
+	{
+		i = 0;
+		while (tab[i])
+			free(tab[i++]);
+		free(tab);
+	}
 }

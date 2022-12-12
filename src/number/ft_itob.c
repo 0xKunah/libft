@@ -10,33 +10,33 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/string.h"
+#include "../../includes/string.h"
 
-char    *ft_itob(int n, char *base)
+char	*ft_itob(int n, char *base)
 {
-    int     i;
-    int     j;
-    int     len;
-    char    *str;
+	int		i;
+	int		j;
+	int		len;
+	char	*str;
 
-    i = 0;
-    j = 0;
-    len = ft_strlen(base);
-    str = (char *)malloc(sizeof(char) * 33);
-    if (n == 0)
-        str[i++] = '0';
-    while (n != 0)
-    {
-        str[i++] = base[n % len];
-        n /= len;
-    }
-    str[i] = '\0';
-    while (j < i / 2)
-    {
-        str[j] ^= str[i - j - 1];
-        str[i - j - 1] ^= str[j];
-        str[j] ^= str[i - j - 1];
-        j++;
-    }
-    return (str);
+	i = 0;
+	j = 0;
+	len = ft_strlen(base);
+	str = (char *)malloc(sizeof(char) * 33);
+	if (n == 0)
+		str[i++] = '0';
+	while (n != 0)
+	{
+		str[i++] = base[n % len];
+		n /= len;
+	}
+	str[i] = '\0';
+	while (j < i / 2)
+	{
+		str[j] ^= str[i - j - 1];
+		str[i - j - 1] ^= str[j];
+		str[j] ^= str[i - j - 1];
+		j++;
+	}
+	return (str);
 }

@@ -15,8 +15,8 @@
 
 # include <stdlib.h>
 
-void    ft_free(void *ptr);
-void    ft_free_tab(void **tab);
+void	ft_free(void *ptr);
+void	ft_free_array(void **tab);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 void	*ft_memchr(const void *s, int c, size_t n);

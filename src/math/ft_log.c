@@ -10,15 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_log(int n, int base)
+int	ft_log(int n, int base)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (n > 0)
-    {
-        n /= base;
-        i++;
-    }
-    return (i);
+	i = 0;
+	while (n > 0)
+	{
+		n /= base;
+		i++;
+	}
+	return (i);
 }

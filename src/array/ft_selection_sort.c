@@ -10,28 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void    **selection_sort(void **tab, int (*cmp)(void *, void *))
+void	**selection_sort(void **tab, int (*cmp)(void *, void *))
 {
-    int     i;
-    int     j;
-    int     min;
-    void    *tmp;
+	int		i;
+	int		j;
+	int		min;
+	void	*tmp;
 
-    i = 0;
-    while (tab[i])
-    {
-        min = i;
-        j = i + 1;
-        while (tab[j])
-        {
-            if (cmp(tab[j], tab[min]) < 0)
-                min = j;
-            j++;
-        }
-        tmp = tab[i];
-        tab[i] = tab[min];
-        tab[min] = tmp;
-        i++;
-    }
-    return (tab);
+	i = 0;
+	while (tab[i])
+	{
+		min = i;
+		j = i + 1;
+		while (tab[j])
+		{
+			if (cmp(tab[j], tab[min]) < 0)
+				min = j;
+			j++;
+		}
+		tmp = tab[i];
+		tab[i] = tab[min];
+		tab[min] = tmp;
+		i++;
+	}
+	return (tab);
 }

@@ -10,27 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void    **ft_bubble_sort(void **tab, int (*cmp)(void *, void *))
+void	**ft_bubble_sort(void **tab, int (*cmp)(void *, void *))
 {
-    int     i;
-    int     j;
-    void    *tmp;
+	int		i;
+	int		j;
+	void	*tmp;
 
-    i = 0;
-    while (tab[i])
-    {
-        j = 0;
-        while (tab[j])
-        {
-            if (cmp(tab[i], tab[j]) < 0)
-            {
-                tmp = tab[i];
-                tab[i] = tab[j];
-                tab[j] = tmp;
-            }
-            j++;
-        }
-        i++;
-    }
-    return (tab);
+	i = 0;
+	while (tab[i])
+	{
+		j = 0;
+		while (tab[j])
+		{
+			if (cmp(tab[i], tab[j]) < 0)
+			{
+				tmp = tab[i];
+				tab[i] = tab[j];
+				tab[j] = tmp;
+			}
+			j++;
+		}
+		i++;
+	}
+	return (tab);
 }

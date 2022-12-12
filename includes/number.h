@@ -14,9 +14,8 @@
 # define NUMBER_H
 
 int			ft_atoi(const char *str);
-int         ft_atoll(const char *str);
+int			ft_atoll(const char *str);
 char		*ft_itoa(int n);
-char        *ft_itob(int n, char *base);
-char        *ft_itox(int n);
+char		*ft_itob(int n, char *base);
 
 #endif

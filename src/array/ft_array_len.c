@@ -12,14 +12,14 @@
 
 #include <stddef.h>
 
-size_t  ft_array_len(void **tab)
+size_t	ft_array_len(void **tab)
 {
-    size_t  i;
+	size_t	i;
 
-    if (!tab)
-        return (0);
-    i = 0;
-    while (tab[i])
-        i++;
-    return (i);
+	if (!tab)
+		return (0);
+	i = 0;
+	while (tab[i])
+		i++;
+	return (i);
 }

@@ -13,11 +13,11 @@
 #ifndef MATH_H
 # define MATH_H
 
-int ft_abs(int n);
-int ft_clamp(int n, int min, int max);
-int ft_pow(int n, int pow);
-int ft_sqrt(int n);
-int ft_is_prime(int n);
-int ft_log(int n, int base);
+int	ft_abs(int n);
+int	ft_clamp(int n, int min, int max);
+int	ft_pow(int n, int pow);
+int	ft_sqrt(int n);
+int	ft_is_prime(int n);
+int	ft_log(int n, int base);
 
 #endif

@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strtolower(char *str)
+char	*ft_strtolower(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (str[i])
-    {
-        if (str[i] >= 'A' && str[i] <= 'Z')
-            str[i] += 32;
-        i++;
-    }
-    return (str);
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 32;
+		i++;
+	}
+	return (str);
 }

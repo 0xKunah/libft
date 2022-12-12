@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_pow(int nb, int pow)
+int	ft_pow(int nb, int pow)
 {
-    int	n;
+	int	n;
 
-    if (pow < 0)
-        return (0);
-    if (pow == 0)
-        return (1);
-    n = nb;
-    while (--pow)
-        nb *= n;
-    return (nb);
+	if (pow < 0)
+		return (0);
+	if (pow == 0)
+		return (1);
+	n = nb;
+	while (--pow)
+		nb *= n;
+	return (nb);
 }

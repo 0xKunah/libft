@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int    ft_clamp(int min, int max, int n)
+int	ft_clamp(int min, int max, int n)
 {
-    if (n < min)
-        return (min);
-    if (n > max)
-        return (max);
-    return (n);
+	if (n < min)
+		return (min);
+	if (n > max)
+		return (max);
+	return (n);
 }

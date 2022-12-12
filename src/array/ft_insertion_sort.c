@@ -10,24 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void    **ft_insertion_sort(void **tab, int (*cmp)(void *, void *))
+void	**ft_insertion_sort(void **tab, int (*cmp)(void *, void *))
 {
-    int     i;
-    int     j;
-    void    *tmp;
+	int		i;
+	int		j;
+	void	*tmp;
 
-    i = 1;
-    while (tab[i])
-    {
-        j = i;
-        while (j > 0 && cmp(tab[j - 1], tab[j]) > 0)
-        {
-            tmp = tab[j];
-            tab[j] = tab[j - 1];
-            tab[j - 1] = tmp;
-            j--;
-        }
-        i++;
-    }
-    return (tab);
+	i = 1;
+	while (tab[i])
+	{
+		j = i;
+		while (j > 0 && cmp(tab[j - 1], tab[j]) > 0)
+		{
+			tmp = tab[j];
+			tab[j] = tab[j - 1];
+			tab[j - 1] = tmp;
+			j--;
+		}
+		i++;
+	}
+	return (tab);
 }
