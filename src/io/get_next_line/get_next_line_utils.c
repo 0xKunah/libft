@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-char	*ft_free(char *to_free, char *retval)
+char	*ft_free_ret(char *to_free, char *retval)
 {
 	if (to_free)
 		free(to_free);
@@ -50,7 +50,7 @@ char	*ft_truncate(char buf[BUFFER_SIZE], char *str, size_t c_idx)
 	char	*copy;
 
 	if (!initializer(&i, &copy, c_idx, str))
-		return (ft_free(str, NULL));
+		return (ft_free_ret(str, NULL));
 	while (str && str[i])
 	{
 		copy[i] = str[i];
@@ -68,5 +68,5 @@ char	*ft_truncate(char buf[BUFFER_SIZE], char *str, size_t c_idx)
 	}
 	buf[j] = '\0';
 	copy[i] = '\0';
-	return (ft_free(str, copy));
+	return (ft_free_ret(str, copy));
 }

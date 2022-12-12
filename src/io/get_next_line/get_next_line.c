@@ -23,7 +23,7 @@ static char	*ft_concat(char *str, char buf[BUFFER_SIZE])
 	buflen = ft_strlen(buf);
 	s = malloc((strlen + buflen + 1) * sizeof(char));
 	if (!s)
-		return (ft_free(str, NULL));
+		return (ft_free_ret(str, NULL));
 	i = 0;
 	while (i < strlen + buflen)
 	{
@@ -34,7 +34,7 @@ static char	*ft_concat(char *str, char buf[BUFFER_SIZE])
 		i++;
 	}
 	s[i] = '\0';
-	return (ft_free(str, s));
+	return (ft_free_ret(str, s));
 }
 
 static char	*init_and_check(int *reading, char **str, int fd)
@@ -72,5 +72,5 @@ char	*get_next_line(int fd)
 	}
 	if (!reading)
 		return (str);
-	return (ft_free(str, NULL));
+	return (ft_free_ret(str, NULL));
 }

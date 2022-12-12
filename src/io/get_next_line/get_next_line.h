@@ -27,6 +27,6 @@
 
 ssize_t	ft_indexof(char *s, char c);
 char	*ft_truncate(char buf[BUFFER_SIZE], char *str, size_t c_idx);
-char	*ft_free(char *to_free, char *retval);
+char	*ft_free_ret(char *to_free, char *retval);
 
 #endif
