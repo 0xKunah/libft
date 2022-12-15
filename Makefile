@@ -53,7 +53,6 @@ SRCS			=	char/ft_isalpha.c					char/ft_isdigit.c					\
 					\
 					number/ft_itoa.c					number/ft_atoi.c					\
 					number/ft_itob.c					number/ft_atoll.c					\
-					number/ft_itox.c														\
 					\
 					array/ft_array_len.c				array/ft_bubble_sort.c				\
 					array/ft_bucket_sort.c				array/ft_insertion_sort.c			\
