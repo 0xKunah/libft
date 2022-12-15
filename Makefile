@@ -6,7 +6,7 @@
 #    By: dbiguene <dbiguene@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/16 13:34:19 by dbiguene          #+#    #+#              #
-#    Updated: 2022/11/21 17:03:39 by dbiguene         ###   ########lyon.fr    #
+#    Updated: 2022/12/15 21:54:44 by dbiguene         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,8 +56,7 @@ SRCS			=	char/ft_isalpha.c					char/ft_isdigit.c					\
 					\
 					array/ft_array_len.c				array/ft_bubble_sort.c				\
 					array/ft_bucket_sort.c				array/ft_insertion_sort.c			\
-					array/ft_merge_sort.c				array/ft_quick_sort.c				\
-					array/ft_selection_sort.c												\
+					array/ft_merge_sort.c				array/ft_selection_sort.c			\
 					\
 					memory/ft_calloc.c					memory/ft_memmove.c					\
 					memory/ft_memset.c					memory/ft_bzero.c					\
