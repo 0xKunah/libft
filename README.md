@@ -81,7 +81,6 @@
         <li>ft_bucket_sort</li>
         <li>ft_insertion_sort</li>
         <li>ft_merge_sort</li>
-        <li>ft_quick_sort</li>
         <li>ft_selection_sort</li>
 		<h4>io: </h4>
 		<li>ft_printf</li>
@@ -101,7 +100,6 @@
         <h4>Number: </h4>
         <li>ft_atoll</li>
         <li>ft_itob</li>
-        <li>ft_itox</li>
         <h4>String: </h4>
         <li>ft_strtolower</li>
         <li>ft_strtoupper</li>
