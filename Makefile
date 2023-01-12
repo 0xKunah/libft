@@ -34,8 +34,8 @@ HEADERS_LIST	=	libft.h					char.h		\
 
 SRCS			=	char/ft_isalpha.c					char/ft_isdigit.c					\
 					char/ft_isalnum.c					char/ft_isascii.c					\
-					char/ft_isprint.c					char/ft_toupper.c					\
-					char/ft_tolower.c														\
+					char/ft_isprint.c					char/ft_isspace.c					\
+					char/ft_tolower.c					char/ft_toupper.c					\
 					\
 					string/ft_strchr.c					string/ft_split.c					\
 					string/ft_strlcat.c					string/ft_strlcpy.c					\
