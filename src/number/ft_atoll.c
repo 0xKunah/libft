@@ -12,7 +12,7 @@
 
 #include "../../includes/char.h"
 
-int	ft_atoll(const char *str)
+long long	ft_atoll(const char *str)
 {
 	int			i;
 	int			sign;
